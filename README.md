@@ -16,8 +16,11 @@ var options = {
 ## Html Kod Bloğu ##
 
 `data-effect` Elemente ait efekt ayarı
+
 `data-delay` Elementin görünme ile kaybolma arasındaki süre
+
 `data-position` Elementin posizyonu. `x,y` = `yatay,dikey` Pozisyon ayarları
+
 `data-direction` Elementin yön bilgisi
 
 -- Not --
