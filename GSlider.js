@@ -8,7 +8,7 @@
  * Author : Fatih Komaralp
  */
 
-$(function(){
+(function($){
     var globals = {
         
         blockList : [],
@@ -185,4 +185,4 @@ var init = {
         return methods;
     };
     
-})(JQuery);
+}(jQuery));
