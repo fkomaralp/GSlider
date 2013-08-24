@@ -90,14 +90,16 @@ var options = {
 </div><!-- .slider_container tag sonu -->
 ```
 ### GSlider Çağrılması ###
-
-var gslider = $("#slider").gslider({ autoplay : true });
+```javascript
+var gslider = $("#slider").gslider();
+```
 
 ### Metodlar ###
-
+```javascript
 gslider.start();    // Başlat 
 gslider.stop();     // Durdur
 gslider.resume();   // Kaldığın yerden devam et
+```
 
 ### Lisans ###
 
