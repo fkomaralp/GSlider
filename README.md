@@ -114,7 +114,7 @@ var gslider = $("#slider").gslider();
 gslider.start();
 ```
 
-### Metodlar ###
+### Methods ###
 ```javascript
 gslider.start();    // Start slider
 gslider.stop();     // Stop slider
@@ -123,6 +123,6 @@ gslider.next();     // Next slider
 gslider.prev();     // Previous slider
 ```
 
-### Lisans ###
+### License ###
 
 The MIT License (MIT)
