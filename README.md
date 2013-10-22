@@ -2,36 +2,46 @@
 
 Flexible slider.
 
-## Ayarlar ##
+## Options ##
 
 ```javascript
 var options = {
     //Varsayılan değerler 
-    childElementTimeout : 800, // Blok içlerinde bulunan div taglarının ne kadar süre boyunca bekletileceği
-    sliderDelay : 5000, // Toplam blok süresi
-    autoplay : false, // Otomatik oynatma
-    startat : 0 // Başlangıç pozisyon index'i
+    childElementTimeout : 800, // Child element delay
+    sliderDelay : 5000, // Total delay
+    autoplay : false, // Auto start
+    startat : 0 // Start index
 }
 ```
-## Html Kod Bloğu ##
+## Html code properties ##
 
-`data-effect` Elemente ait efekt ayarı
+`data-effect` Show or hide effect
 
-`data-delay` Elementin görünme ile kaybolma arasındaki süre
+Ex : data-effect="drop"
 
-`data-position` Elementin posizyonu. `x,y` = `yatay,dikey` Pozisyon ayarları
+`data-delay` Child element delay
 
-`data-direction` Elementin yön bilgisi
+Ex : data-delay="500"
 
--- Not --
-`data-effect` Belirteçi için JQuery UI kütüphanesinin .effect() metodu kullanılmıştır. Buna bağlı olarak bu method desteği dahilindeki tüm efekt özellikleri desteklenmektedir.
-`data-direction` Belirteçi için sadece `left`, `right`, `up`, `down` kullanılabilir.
+`data-position` Child element position. `x,y` = `horizontal,vertical`
+
+Ex : data-pozition="100,35"
+
+`data-direction` Effect direction
+
+Ex : data-position="left"
+
+-- Notes --
+`data-effect` is supporting by jquery ui (<=1.6)
+`data-direction` Values are : `left`, `right`, `up` and `down`
 
 ```html
+
+<!-- Slider container -->
 <div class="slider_container">
         <div id="slider">
             
-            <!-- 1'inci element -->
+            <!-- 1th block -->
             <div class="block">                
                 <div class="title"
                      data-effect="bounce" 
@@ -58,9 +68,9 @@ var options = {
                      data-position="720,50"><img src="resim.png"> Konuya bağlı resim
                 </div>
 
-           </div> <!-- .block tag sonu -->
+           </div>
            
-           <!-- 2'inci element -->
+           <!-- 2th block -->
            <div class="block">                
                 <div class="title"
                      data-effect="bounce" 
@@ -87,42 +97,32 @@ var options = {
                      data-position="720,50"><img src="resim.png"> Konuya bağlı resim
                 </div>
 
-           </div> <!-- .block tag sonu -->
+           </div>
 
-        </div><!-- .slide tag sonu -->
-</div><!-- .slider_container tag sonu -->
+        </div>
+</div><!-- End of slider container -->
 ```
-### GSlider Çağrılması ###
+### How to call GSlider? ###
+```javascript
+var gslider = $("#slider").gslider({ autostart = true });
+```
+
+OR
+
 ```javascript
 var gslider = $("#slider").gslider();
+gslider.start();
 ```
 
 ### Metodlar ###
 ```javascript
-gslider.start();    // Başlat 
-gslider.stop();     // Durdur
-gslider.resume();   // Kaldığın yerden devam et
+gslider.start();    // Start slider
+gslider.stop();     // Stop slider
+gslider.resume();   // Resume stoped slider
+gslider.next();     // Next slider
+gslider.prev();     // Previous slider
 ```
 
 ### Lisans ###
 
 The MIT License (MIT)
-
-Copyright (c) 2013, GAYRETSOFT [http://gayretsoft.com]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
