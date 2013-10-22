@@ -17,19 +17,19 @@ var options = {
 
 `data-effect` Show or hide effect
 
-Ex : data-effect="drop"
+Ex : `data-effect="drop"`
 
 `data-delay` Child element delay
 
-Ex : data-delay="500"
+Ex : `data-delay="500"`
 
 `data-position` Child element position. `x,y` = `horizontal,vertical`
 
-Ex : data-pozition="100,35"
+Ex : `data-pozition="100,35"`
 
 `data-direction` Effect direction
 
-Ex : data-position="left"
+Ex : `data-position="left"`
 
 -- Notes --
 `data-effect` is supporting by jquery ui (<=1.6)
